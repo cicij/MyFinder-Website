@@ -1,0 +1,130 @@
+
+<style>
+  .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: white;
+  }
+
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    }
+
+    .titlee{
+      font-family: "Courier New" ,Monospace;
+    }
+
+
+</style>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="icon" href="calendar.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="Organized Binder">
+    <title>MyFinder Website</title>
+    <h1 id = "titlee"><small>MyFinder Summary</small>
+    </h1>
+  </head>
+  <body>
+<marquee>MyFinder MyFinder MyFinder MyFinder MyFinder</marquee>
+  <div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Intro')">Intro</button>
+  <button class="tablinks" onclick="openTab(event, 'Finance')">Finance</button>
+  <button class="tablinks" onclick="openTab(event, 'Binder')">Binder</button>
+  <button class="tablinks" onclick="openTab(event, 'About')">About</button>
+</div>
+
+<!-- Tab content -->
+<div id="Intro" class="tabcontent">
+  <h3>Intro</h3>
+  <p>
+      MyFinder is a an organized binder that is totally personalized to you.
+      You can have and write down all your materials for classes, while keeping
+      it all in one place. What's more, you can also manage your money and
+      track your balances and usage. MyFinder is a must-have for all students!
+  </p>
+  <hr>
+  <a href="#"><img src="https://media.discordapp.net/attachments/430062411303616522/650750369722531859/unknown.png" alt="a picture of a plant!"></a>
+</div>
+
+<div id="Finance" class="tabcontent">
+  <h3>Finance</h3>
+  <p>Through the finance feature, you can now keep track of how much money you spent,
+     your monthly allowances, and savings.</p>
+     <hr>
+     <a href="#"><img src="https://media.discordapp.net/attachments/430062411303616522/650750369722531859/unknown.png" alt="a picture of a plant!"></a>
+</div>
+
+<div id="Binder" class="tabcontent">
+  <h3>Binder</h3>
+  <p>This is the main feature of MyFinder, where students can add classes and
+    keep all their material in their respective tab. You can also use the todo
+     list feature, where you can add assignments.</p>
+     <hr>
+     <a href="#"><img src="https://media.discordapp.net/attachments/430062411303616522/650750369722531859/unknown.png" alt="a picture of a plant!"></a>
+     </div>
+<div id="About" class="tabcontent">
+    <h3>About</h3>
+    <p>This website was created by Cecilia Jiang, Trisha, Kopparthi, Arushi Aggarwal,
+    Akshara Kollu. We hope you get a good idea of what our app is about within each
+    of the functions! Have a great day!</p>
+    <hr>
+    <a href="#"><img src="https://media.discordapp.net/attachments/430062411303616522/650750369722531859/unknown.png" alt="a picture of a plant!"></a>
+</div>
+<script type="text/javascript">
+  function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+  </body>
+</html>
